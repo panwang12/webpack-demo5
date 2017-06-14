@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title><%=htmlWebpackPlugin.options.title%></title>
+ </head>
+ <body>
+	<%for(var key in htmlWebpackPlugin.files){%>
+  <%=key%>:<%=JSON.stringify(htmlWebpackPlugin.files[key])%>
+  <%}%>
+	-------------------------------------------------
+  <%for(var key in htmlWebpackPlugin.options){%>
+  <%=key%>:<%=JSON.stringify(htmlWebpackPlugin.options[key])%>
+  <%}%>
+ </body>
+</html>
